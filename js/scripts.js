@@ -51,9 +51,16 @@ var roman = function(input) {
             output += "V";
         }
 
-        else if(input1 % 5 === 1)
+        else if((input1 % 5 === 1) ||
+                (input1 % 5 === 2) ||
+                (input1 % 5 === 3))
         {
-            output += "VI";
+            output += "V";
+            input1 -= 5;
+            for(var i = 0; i < input1; i++)
+            {
+                output += "I";
+            }
         }
 
 

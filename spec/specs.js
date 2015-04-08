@@ -24,4 +24,16 @@ describe('roman', function() {
         expect(roman(6)).to.equal("VI");
     });
 
+    it('will return the string "VII" for the input number 7', function(){
+        expect(roman(7)).to.equal("VII");
+    });
+
+    it('will return the string "VIII" for the input number 8', function(){
+        expect(roman(8)).to.equal("VIII");
+    });
+
+    it('will return the string "IX" for the input number 9', function(){
+        expect(roman(9)).to.equal("IX");
+    });
+
 });
