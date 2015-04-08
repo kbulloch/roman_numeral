@@ -84,17 +84,32 @@ describe('roman', function() {
         expect(roman(54)).to.equal("LIV");
     });
 
-    it('will return the string "C" for the input number 100', function(){
-        expect(roman(100)).to.equal("C");
-    });
-
-    it('will return the string "C" for the input number 100', function(){
-        expect(roman(100)).to.equal("C");
+    it('will return the string "LXXVII" for the input number 77', function(){
+        expect(roman(77)).to.equal("LXXVII");
     });
 
     it('will return the string "XC" for the input number 90', function(){
         expect(roman(90)).to.equal("XC");
-    })
+    });
+
+    it('will return the string "C" for the input number 100', function(){
+        expect(roman(100)).to.equal("C");
+    });
+
+    it('will return the string "CXIV" for the input number 114', function(){
+        expect(roman(114)).to.equal("CXIV");
+    });
+
+    it('will return the string "CXLIII" for the input number 143', function(){
+        expect(roman(143)).to.equal("CXLIII");
+    });
+
+    it('will return the string "CCLXVII" for the input number 267', function(){
+        expect(roman(267)).to.equal("CCLXVII");
+    });
+
+
+
 
 
 
