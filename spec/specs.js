@@ -1,35 +1,7 @@
-describe('coin_combo', function() {
+describe('roman', function() {
 
-    it('will return one penny for a change amount of 0.01', function() {
-        expect(coin_combo(0.01)).to.eql([1, 0, 0, 0]);
-    });
-
-    it('will return one nickel for a change amount of 0.05', function() {
-        expect(coin_combo(0.05)).to.eql([0, 1, 0, 0]);
-    });
-
-    it('will return one penny and one nickel for a change amount of 0.06', function() {
-        expect(coin_combo(0.06)).to.eql([1, 1, 0, 0]);
-    });
-
-    it('will return two pennies and one nickel for a change amount of 0.07', function() {
-        expect(coin_combo(0.07)).to.eql([2, 1, 0, 0]);
-    });
-
-    it('will return one dime for a change amount of 0.10', function() {
-        expect(coin_combo(0.10)).to.eql([0, 0, 1, 0]);
-    });
-
-    it('will return one dime, one nickel, one penny for a change amount of 0.16', function() {
-        expect(coin_combo(0.16)).to.eql([1, 1, 1, 0]);
-    });
-
-    it('will return one quarter for a change amount of 0.25', function() {
-        expect(coin_combo(0.25)).to.eql([0, 0, 0, 1]);
-    });
-
-    it('will return two pennies, two dimes, three quarters for a change amount of 0.97', function() {
-        expect(coin_combo(0.97)).to.eql([2, 0, 2, 3]);
+    it('will return the string "I" for the number 1', function() {
+        expect(roman(1)).to.equal("I");
     });
 
 });
