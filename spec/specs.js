@@ -44,6 +44,10 @@ describe('roman', function() {
         expect(roman(11)).to.equal("XI");
     });
 
+    it('will return the string "XII" for the input number 12', function(){
+        expect(roman(12)).to.equal("XII");
+    });
+
     it('will return the string "XIV" for the input number 14', function(){
         expect(roman(14)).to.equal("XIV");
     });
@@ -51,5 +55,43 @@ describe('roman', function() {
     it('will return the string "XV" for the input number 15', function(){
         expect(roman(15)).to.equal("XV");
     });
+
+    it('will return the string "XVI" for the input number 16', function(){
+        expect(roman(16)).to.equal("XVI");
+    });
+
+    it('will return the string "XIX" for the input number 19', function(){
+        expect(roman(19)).to.equal("XIX");
+    });
+
+    it('will return the string "XX" for the input number 20', function(){
+        expect(roman(20)).to.equal("XX");
+    });
+
+    it('will return the string "XXIV" for the input number 24', function(){
+        expect(roman(24)).to.equal("XXIV");
+    });
+
+    it('will return the string "XL" for the input number 40', function(){
+        expect(roman(40)).to.equal("XL");
+    });
+
+    it('will return the string "L" for the input number 50', function(){
+        expect(roman(50)).to.equal("L");
+    });
+
+    it('will return the string "LIV" for the input number 54', function(){
+        expect(roman(54)).to.equal("LIV");
+    });
+
+    it('will return the string "C" for the input number 100', function(){
+        expect(roman(100)).to.equal("C");
+    });
+
+    it('will return the string "C" for the input number 100', function(){
+        expect(roman(100)).to.equal("C");
+    });
+
+
 
 });
