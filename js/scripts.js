@@ -35,7 +35,7 @@ var roman = function(input) {
 
         }
 
-        else if(input1 % 5 === 4)
+        else if(input1 % 10 === 4)
         {
             output += "I";
             input1 -= 4;
@@ -44,6 +44,11 @@ var roman = function(input) {
             {
                 output += "V";
             }
+        }
+
+        else if(input1 % 10 === 9)
+        {
+            output += "IX";
         }
 
         else if(input1 % 5 === 0)
