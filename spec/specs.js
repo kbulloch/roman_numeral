@@ -1,17 +1,15 @@
-describe('queenAttack', function() {
-    it('is false if the coordinates are not horizontally, vertically, or diagonally in line with each other', function() {
-        expect(queenAttack( [1, 1], [2, 3])).to.equal(false);
+describe('coin_combo', function() {
+
+    it('it will return one penny for a change amount of 0.01', function() {
+        expect(coin_combo(0.01)).to.eql([1, 0, 0, 0]);
     });
 
-    it('is true if the coordinates are in line vertically', function() {
-        expect(queenAttack( [1, 1], [1, 2])).to.equal(true);
+    it('it will return one nickel for a change amount of 0.05', function() {
+        expect(coin_combo(0.05)).to.eql([0, 1, 0, 0]);
     });
 
-    it('is true if the coordinates are in line horizontally', function() {
-        expect(queenAttack( [1, 1], [2, 1])).to.equal(true);
-    });
-
-    it('is true if the coordinates are in line diagonally', function() {
-        expect(queenAttack( [1, 1], [2, 2])).to.equal(true);
-    });
 });
+
+//return look like :  [penny, nickel, dime, quarter]
+//coins[p] = 1
+// "penny = 1, nickel = x"
