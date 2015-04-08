@@ -6,8 +6,6 @@ var coin_combo = function(input) {
 
     var change = input * 100;
 
-
-
     while ((change - 25) >= 0)
     {
         quarter++;
@@ -25,37 +23,34 @@ var coin_combo = function(input) {
         change -= 5;
     }
 
-    penny = change;
-
-
+    penny = Math.round(change);
+    //used round because of 2.000000001 pennies being returned on 0.07
 
     return [penny, nickel, dime, quarter];
 };
 
-// it('it will return one nickel for a change amount of 0.05', function() {
-//     expect(coin_combo(0.05)).to.eql([0, 1, 0, 0]);
-// });
-//
-// $(document).ready(function() {
-//     $("form#coords").submit(function(event) {
-//     var enemy_x = parseInt($("input#enemy_x").val());
-//     var enemy_y = parseInt($("input#enemy_y").val());
-//
-//     var queen_x = parseInt($("input#queen_x").val());
-//     var queen_y = parseInt($("input#queen_y").val());
-//
-//     var result = queenAttack([queen_x, queen_y], [enemy_x, enemy_y]);
-//
-//     if (!result) {
-//         $(".not").text("not");
-//     }
-//
-//     else {
-//         $(".not").text("");
-//     }
-//
-//     $("#result").show();
-//     event.preventDefault();
-//
-//     });
-// });
+$(document).ready(function() {
+    $("form#changeInput").submit(function(event) {
+    var change = parseFloat($("input#change_amount").val());
+
+    var result = coin_combo(change);
+
+    $('#change_returned').empty();
+
+    var penny = result[0];
+    var nickel = result[1];
+    var dime = result[2];
+    var quarter = result[3];
+
+
+    $('#change_returned').append(
+        "<li class='text-primary'>Pennies: " + penny + "</li>" +
+        "<li class='text-success'>Nickles: " + nickel + "</li>" +
+        "<li class='text-danger'>Dimes: " + dime + "</li>" +
+        "<li class='text-warning'>Quarters: " + quarter + "</li>");
+
+    $("#change_returned").show();
+    event.preventDefault();
+
+    });
+});

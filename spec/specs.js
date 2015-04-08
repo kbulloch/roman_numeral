@@ -12,6 +12,10 @@ describe('coin_combo', function() {
         expect(coin_combo(0.06)).to.eql([1, 1, 0, 0]);
     });
 
+    it('will return two pennies and one nickel for a change amount of 0.07', function() {
+        expect(coin_combo(0.07)).to.eql([2, 1, 0, 0]);
+    });
+
     it('will return one dime for a change amount of 0.10', function() {
         expect(coin_combo(0.10)).to.eql([0, 0, 1, 0]);
     });
@@ -24,12 +28,8 @@ describe('coin_combo', function() {
         expect(coin_combo(0.25)).to.eql([0, 0, 0, 1]);
     });
 
-    it('will return two penny, two dimes, one quarter for a change amount of 0.97', function() {
+    it('will return two pennies, two dimes, three quarters for a change amount of 0.97', function() {
         expect(coin_combo(0.97)).to.eql([2, 0, 2, 3]);
     });
 
 });
-
-//return look like :  [penny, nickel, dime, quarter]
-//coins[p] = 1
-// "penny = 1, nickel = x"
