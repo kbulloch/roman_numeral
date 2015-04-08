@@ -24,7 +24,16 @@ var roman = function(input) {
         // }
         //
 
-
+        /*
+        Symbol  Value
+        I       1
+        V       5
+        X       10
+        L       50
+        C       100
+        D       500
+        M       1,000
+*/
 
         if(input1 < 4)
         {
@@ -38,9 +47,9 @@ var roman = function(input) {
         else if(input1 % 10 === 4)
         {
             output += "I";
-            input1 -= 4;
+            var rem = input1 - 4;
 
-            if(input1/5 === 0)
+            if(rem/5 === 0)
             {
                 output += "V";
             }
@@ -51,18 +60,35 @@ var roman = function(input) {
             output += "IX";
         }
 
+        else if(input1 % 10 === 0)
+        {
+            output += "X";
+        }
+
         else if(input1 % 5 === 0)
         {
             output += "V";
         }
 
-        else if((input1 % 5 === 1) ||
-                (input1 % 5 === 2) ||
-                (input1 % 5 === 3))
+        else if((input1 % 10 === 1) ||
+                (input1 % 10 === 2) ||
+                (input1 % 10 === 3))
+        {
+            output += "X";
+            rem = input1 - 10;
+            for(var i = 0; i < rem; i++)
+            {
+                output += "I";
+            }
+        }
+
+        else if((input1 % 10 === 6) ||
+                (input1 % 10 === 7) ||
+                (input1 % 10 === 8))
         {
             output += "V";
-            input1 -= 5;
-            for(var i = 0; i < input1; i++)
+            rem = input1 - 5;
+            for(var i = 0; i < rem; i++)
             {
                 output += "I";
             }

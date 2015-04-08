@@ -36,4 +36,12 @@ describe('roman', function() {
         expect(roman(9)).to.equal("IX");
     });
 
+    it('will return the string "X" for the input number 10', function(){
+        expect(roman(10)).to.equal("X");
+    });
+
+    it('will return the string "XI" for the input number 11', function(){
+        expect(roman(11)).to.equal("XI");
+    });
+
 });
