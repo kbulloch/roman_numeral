@@ -92,6 +92,10 @@ describe('roman', function() {
         expect(roman(100)).to.equal("C");
     });
 
+    it('will return the string "XC" for the input number 90', function(){
+        expect(roman(90)).to.equal("XC");
+    })
+
 
 
 });

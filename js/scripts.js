@@ -45,6 +45,11 @@ var roman = function(input) {
             input1 -= 50;
         }
 
+        if(input1 >= 40) {
+            output += "XL";
+            input1 -= 40;
+        }
+
         while(input1 >= 10) {
             output += "X";
             input1 -= 10;
