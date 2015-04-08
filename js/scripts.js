@@ -93,9 +93,9 @@ $(document).ready(function() {
         "<li class='text-warning'>Dollars: " + dollar + "</li>" +
         "<li class='text-warning'>Fives: " + five + "</li>" +
         "<li class='text-success'>Tens: " + ten + "</li>" +
-        "<li class='text-success'>Twenties: " + twenty + "</li>" +
+        "<li class='text-warning'>Twenties: " + twenty + "</li>" +
         "<li class='text-success'>Fifties: " + fifty + "</li>" +
-        "<li class='text-success'>Hundreds: " + hundred + "</li>");
+        "<li class='text-danger'>Hundreds: " + hundred + "</li>");
 
 
     $("#change_returned").show();
