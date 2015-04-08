@@ -35,24 +35,23 @@ var roman = function(input) {
         M       1,000
 */
 
+
+        while(input1 >= 10) {
+            output += "X";
+            input1 -= 10;
+        }
+
         if(input1 < 4)
         {
             for(var i = 0; i < input1; i++)
             {
                 output += "I";
             }
-
         }
 
         else if(input1 % 10 === 4)
         {
-            output += "I";
-            var rem = input1 - 4;
-
-            if(rem/5 === 0)
-            {
-                output += "V";
-            }
+            output += "IV";
         }
 
         else if(input1 % 10 === 9)
@@ -60,26 +59,9 @@ var roman = function(input) {
             output += "IX";
         }
 
-        else if(input1 % 10 === 0)
-        {
-            output += "X";
-        }
-
         else if(input1 % 5 === 0)
         {
             output += "V";
-        }
-
-        else if((input1 % 10 === 1) ||
-                (input1 % 10 === 2) ||
-                (input1 % 10 === 3))
-        {
-            output += "X";
-            rem = input1 - 10;
-            for(var i = 0; i < rem; i++)
-            {
-                output += "I";
-            }
         }
 
         else if((input1 % 10 === 6) ||
@@ -87,7 +69,7 @@ var roman = function(input) {
                 (input1 % 10 === 8))
         {
             output += "V";
-            rem = input1 - 5;
+            var rem = input1 - 5;
             for(var i = 0; i < rem; i++)
             {
                 output += "I";

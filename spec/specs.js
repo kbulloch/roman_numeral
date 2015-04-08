@@ -44,4 +44,12 @@ describe('roman', function() {
         expect(roman(11)).to.equal("XI");
     });
 
+    it('will return the string "XIV" for the input number 14', function(){
+        expect(roman(14)).to.equal("XIV");
+    });
+
+    it('will return the string "XV" for the input number 15', function(){
+        expect(roman(15)).to.equal("XV");
+    });
+
 });
