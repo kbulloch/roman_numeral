@@ -35,6 +35,16 @@ var roman = function(input) {
         M       1,000
 */
 
+        while(input1 >= 500) {
+            output += "D";
+            input1 -= 500;
+        }
+
+        if(input1 >= 400) {
+            output += "CD";
+            input1 -= 400;
+        }
+
         while(input1 >= 100) {
             output += "C";
             input1 -= 100;

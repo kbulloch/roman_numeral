@@ -108,6 +108,21 @@ describe('roman', function() {
         expect(roman(267)).to.equal("CCLXVII");
     });
 
+    it('will return the string "CCCXCIX" for the input number 399', function(){
+        expect(roman(399)).to.equal("CCCXCIX");
+    });
+
+    it('will return the string "CD" for the input number 400', function(){
+        expect(roman(400)).to.equal("CD");
+    });
+
+    it('will return the string "D" for the input number 500', function(){
+        expect(roman(500)).to.equal("D");
+    });
+
+    it('will return the string "DCCLXXVII" for the input number 777', function(){
+        expect(roman(777)).to.equal("DCCLXXVII");
+    });
 
 
 
