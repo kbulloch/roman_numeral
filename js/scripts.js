@@ -6,14 +6,23 @@ var coin_combo = function(input) {
 
     var num = input * 100;
 
-    if(num % 5 === 0 ) {
-        nickel = num / 5;
-    }
+    penny = Math.round(num % 5); //rem = 1
 
-    else if(num % 1 === 0)
-    {
-        penny = num / 1;
-    }
+    num = num - penny; //6 = 6-1 = 5
+
+    nickel = Math.round(num / 5); //nic = 5/5 = 1
+
+
+    // if(num % 5 === 0 ) {
+    //     nickel = num / 5;
+    // }
+    //
+    // else
+    // {
+    //     penny = num % 5;
+    // }
+
+
 
     return [penny, nickel, dime, quarter];
 };
