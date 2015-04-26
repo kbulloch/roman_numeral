@@ -5,7 +5,7 @@
 
 ##Description
 
-This app takes an integer input and converts it to a roman numeral.
+This app takes an integer input and converts it to a roman numeral.  An exercise in Javascript and jQuery for Epicodus.
 
 ##Setup
 
