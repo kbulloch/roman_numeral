@@ -5,20 +5,22 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Coin Combination</title>
+    <title>Roman Numeral Converter</title>
 </head>
 <body>
     <div class="container">
-        <h3>Let's return your change:</h3>
+        <h3>Convert a number to roman numeral:</h3>
 
-        <form id="changeInput">
+        <form id="input">
             <div class="form-group">
-                <label for="change_amount">Enter your change</label>
-                <input type="text" id="change_amount" placeholder="0.97" class="form-control">
+                <label for="number">Enter your number</label>
+                <input type="number" name="" id="number" class="form-control">
             </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-     <div id="change_returned">
+     <div id="output">
+        <h3><span class="output"></span></h3>
      </div>
 
 </div>

@@ -11,19 +11,6 @@ var roman = function(input) {
     else
     {
 
-
-        // possible structure for input numbers > 9
-        // var split_input = input.split("");
-        //
-        // for(var i = 0; i< split_input.length; i++)
-        // {
-        //     if([split_input.length-1] === 1)
-        //     {
-        //         output += "I";
-        //     }
-        // }
-        //
-
         /*
         Symbol  Value
         I       1
@@ -34,6 +21,10 @@ var roman = function(input) {
         D       500
         M       1,000
 */
+        while(input1 >= 1000) {
+            output += "M";
+            input1 -= 1000;
+        }
 
         while(input1 >= 500) {
             output += "D";
@@ -105,34 +96,19 @@ var roman = function(input) {
             }
         }
 
-
      }
-
-
 
     return output;
 };
 
-// trying it out II
+$(document).ready(function() {
 
+  $("form#input").submit(function(event){
+    event.preventDefault();
+    var input = $("input#number").val();
+    var output = roman(input);
+    console.log(input);
 
-// trying it out!
-
-// var roman = function(input) {
-//
-//     var input1 = parseInt(input);
-//
-//     if (input1 > 3999)
-//     {
-//         return "That number is too big to be converted!";
-//     }
-//
-//     else if(input1 % 5 === 0)
-//     {
-//         output += "V";
-//     }
-//     return output;
-// };
-
-//input = 2
-//output = "II"
+    $(".output").text(output);
+  });
+});
